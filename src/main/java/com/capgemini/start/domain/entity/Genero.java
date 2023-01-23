@@ -24,10 +24,10 @@ public class Genero {
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_tipo", nullable = false)
+	@Column(name = "id_genero", nullable = false)
 	private Long id;
 	
-	@Column(name ="ds_tipo", nullable = false, length = 100)
+	@Column(name ="ds_genero", nullable = false, length = 100)
 	private String descricao;
 	
 	@Column(name = "dt_criacao", nullable = false)
