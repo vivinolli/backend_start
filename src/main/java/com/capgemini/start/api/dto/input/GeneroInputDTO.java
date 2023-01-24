@@ -10,15 +10,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+@Schema(name = "GeneroInput", description = "Objeto de entrada para inclusão e alteração da entidade Genero")
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class GeneroInputDTO {
-	@Schema(name = "GeneroInput", description = "Objeto de entrada para inclusão e alteração da entidade Genero")
-	@Getter @Setter
-	@NoArgsConstructor
-	@AllArgsConstructor
-	public class GeneroInputDTO {
-		
-		@NotNull
-		@Length(max = 100)
-		private String descricao;
+	@NotNull
+	@Length(max = 100)
+	private String descricao;	
 		
 }
