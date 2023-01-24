@@ -6,10 +6,10 @@ import org.springframework.stereotype.Repository;
 import com.capgemini.start.domain.entity.Genero;
 
 @Repository
-public interface GeneroRepository extends JpaRepository <Genero, Long>{
+public interface GeneroRepository extends JpaRepository<Genero, Long>{
 	
-    boolean existsByDescricaoIgnoreCase(String descricao);
+	boolean existsByDescricaoIgnoreCase(String descricao);
 	
-	boolean existsByIdNotAndDescricaoIgnoreCase(Long id, String descricao);	
+	boolean existsByIdNotAndDescricaoIgnoreCase(Long id, String descricao);
 
 }

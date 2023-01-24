@@ -27,8 +27,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/api/generos")
-public class GeneroResourceImpl implements GeneroResource {
-private final GeneroService service;
+public class GeneroResourceImpl implements GeneroResource{
+	
+	private final GeneroService service;
 	
 	@Autowired
 	private GeneroMapper mapper;
@@ -43,10 +44,10 @@ private final GeneroService service;
 	@Override
 	public ResponseEntity<List<GeneroDTO>> findAll() {
 		return ResponseEntity.ok(
-				this.service.findAll()
-				.stream()
-				.map(genero -> mapper.toDTO(tipo))
-				.collect(Collectors.toList())
+					this.service.findAll()
+					.stream()
+					.map(genero -> mapper.toDTO(genero))
+					.collect(Collectors.toList())
 				);
 	}
 
@@ -80,7 +81,6 @@ private final GeneroService service;
 		return ResponseEntity.ok().build();
 	}
 
-	
 	
 	
 }

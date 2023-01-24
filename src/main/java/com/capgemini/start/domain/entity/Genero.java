@@ -35,6 +35,5 @@ public class Genero {
 	
 	@Column(name = "dt_alteracao")
 	private Date dataAlteracao;
-
-
+	
 }
